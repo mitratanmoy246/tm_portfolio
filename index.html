@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanmoy Mitra | Competitive Programmer</title>
+    <meta name="theme-color" content="#2548a5">
+    <meta name="description" content="Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC." />
+    <meta name="keywords" content="competitive programming, ICPC, algorithms, data structures, Codeforces, CodeChef, LeetCode, VJudge, HackerRank, Green University of Bangladesh" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tanmoy Mitra | Competitive Programmer" />
+    <meta property="og:description" content="Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC." />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cobalt: '#2548a5',
+                        cobaltLight: '#3a66d4',
+                        darkBg: '#030303',
+                        panelBg: '#0a0a0a'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+
+        /* Premium Glass Panels (lighter blur for mobile performance) */
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(37, 72, 165, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-panel:hover {
+            border-color: rgba(37, 72, 165, 0.8);
+            box-shadow: 0 15px 50px -10px rgba(37, 72, 165, 0.3);
+            transform: translateY(-4px);
+        }
+
+        /* Cyber grid background */
+        .cyber-grid {
+            background-image:
+                linear-gradient(to right, rgba(37, 72, 165, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(37, 72, 165, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #6d8dec);
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-1 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .skill-chip {
+            background: rgba(10,10,10,0.65);
+            border: 1px solid rgba(37,72,165,0.25);
+            padding: 14px 18px;
+            border-radius: 16px;
+            color: #dbe7ff;
+            font-family: 'Fira Code', monospace;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            transition: all .35s cubic-bezier(.4,0,.2,1);
+            transform: translateY(12px);
+            opacity: 0;
+        }
+        .skill-chip.in {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .skill-chip:hover {
+            border-color: rgba(37,72,165,0.85);
+            box-shadow: 0 0 30px rgba(37,72,165,0.25);
+            transform: translateY(-4px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto !important; }
+            .skill-chip { transition: none; }
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-gray-300 min-h-screen cyber-grid relative overflow-x-hidden selection:bg-cobalt selection:text-white">
+    <!-- Glowing Background Orbs (reduced blur for performance) -->
+    <div class="fixed top-[-10%] left-[50%] -translate-x-1/2 w-[1000px] h-[1000px] bg-cobalt opacity-[0.12] blur-[120px] rounded-full pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-cobaltLight opacity-[0.08] blur-[80px] rounded-full pointer-events-none z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+        <!-- 1) HERO SECTION -->
+        <header class="min-h-[95vh] flex flex-col justify-center pt-24 pb-20" aria-label="Hero">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+                <div class="flex-1">
+                    <div class="inline-flex items-center gap-3 px-5 py-2 bg-cobalt/15 border border-cobalt/40 rounded-full text-cobaltLight text-sm font-mono mb-10 uppercase tracking-widest backdrop-blur-md shadow-[0_0_20px_rgba(37,72,165,0.3)]">
+                        <i class="fa-solid fa-bolt animate-pulse text-yellow-400" aria-hidden="true"></i> Team GUB_Dragons
+                    </div>
+
+                    <h1 class="text-7xl lg:text-9xl font-black text-white mb-6 tracking-tighter drop-shadow-2xl leading-none">
+                        Tanmoy <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cobaltLight to-blue-200">Mitra</span>
+                    </h1>
+
+                    <h2 class="text-3xl lg:text-4xl text-gray-300 font-bold mb-10 font-mono border-l-8 border-cobalt pl-6">
+                        > Competitive Programmer_
+                    </h2>
+
+                    <p class="text-xl lg:text-2xl max-w-3xl text-gray-400 leading-relaxed mb-14">
+                        Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC while continuously improving through Codeforces, CodeChef, LeetCode, VJudge, and university contests.
+                    </p>
+
+                    <div class="flex flex-wrap gap-5">
+                        <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email" class="flex items-center gap-3 px-8 py-4 bg-cobalt text-white hover:bg-cobaltLight hover:shadow-[0_0_30px_rgba(37,72,165,0.6)] rounded-2xl transition-all font-bold text-base tracking-wide">
+                            <i class="fa-solid fa-envelope text-xl" aria-hidden="true"></i> contact.tanmoy.mitra@gmail.com
+                        </a>
+
+                        <a href="resume.pdf" aria-label="Resume" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
+                            <i class="fa-solid fa-file-arrow-down text-xl" aria-hidden="true"></i> Resume
+                        </a>
+
+                        <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="GitHub" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
+                            <i class="fa-brands fa-github text-xl" aria-hidden="true"></i> GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="LinkedIn" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
+                            <i class="fa-brands fa-linkedin text-xl" aria-hidden="true"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <div class="shrink-0 relative group" aria-label="Profile image">
+                    <div class="absolute inset-0 bg-cobalt rounded-full blur-[80px] opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+                    <img src="Profile picture.jpeg" alt="Portrait of Tanmoy Mitra" class="relative w-80 h-80 lg:w-[500px] lg:h-[500px] object-cover rounded-full border-[8px] border-panelBg shadow-[0_0_0_4px_rgba(37,72,165,0.8)] z-10 grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.03]" onerror="this.src='https://placehold.co/500x500/0a0a0a/2548a5?text=TM'">
+                </div>
+            </div>
+        </header>
+
+        <!-- 2) ACHIEVEMENTS SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Achievements">
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                        <i class="fa-solid fa-trophy text-cobaltLight text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-black text-white tracking-tighter">Achievements</h2>
+                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Dynamic contest stats</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fa-solid fa-gavel text-cobaltLight text-3xl" aria-hidden="true"></i>
+                        <h3 class="text-2xl font-black text-white">Codeforces Max Rating</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Max Rating</p>
+                    <p id="ach-cf-max-rating" class="text-5xl font-black text-gradient">0</p>
+                    <p id="ach-cf-max-rank" class="text-sm text-cobaltLight font-mono mt-2 font-bold">Loading...</p>
+                </div>
+
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fa-solid fa-fire text-amber-500 text-3xl" aria-hidden="true"></i>
+                        <h3 class="text-2xl font-black text-white">Current CodeChef Rating</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Current Rating</p>
+                    <p id="ach-cc-current" class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-500">0</p>
+                    <div id="ach-cc-stars" class="flex items-center gap-1.5 text-amber-500 text-xl mt-4" aria-label="CodeChef stars"></div>
+                </div>
+
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fa-solid fa-check-double text-green-400 text-3xl" aria-hidden="true"></i>
+                        <h3 class="text-2xl font-black text-white">Total Problems Solved</h3>
+                    </div>
+                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Total Unique Accepted</p>
+                    <p id="ach-total-solved" class="text-5xl font-black text-gradient">0</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- 3) LIVE CP STATS -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Live competitive programming stats">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                        <i class="fa-solid fa-bullseye text-cobaltLight text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-black text-white tracking-tighter">Live Competitive Programming Stats</h2>
+                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Competitive programmer focus</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+
+                <!-- Codeforces -->
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div class="flex justify-between items-start mb-10">
+                        <h3 class="text-3xl font-black text-white flex items-center gap-4">
+                            <i class="fa-solid fa-code text-cobaltLight text-4xl" aria-hidden="true"></i>
+                            <span>Codeforces</span>
+                            <span id="cf-handle" class="ml-2 px-4 py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-sm font-bold">@mitratanmoy246</span>
+                        </h3>
+                        <a href="https://codeforces.com/profile/mitratanmoy246" target="_blank" aria-label="Codeforces profile" class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-xl shadow-lg">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div id="cf-loader" class="text-cobaltLight animate-pulse text-base font-mono bg-cobalt/10 p-5 rounded-2xl border border-cobalt/20 w-fit">Syncing Codeforces...</div>
+                    <div id="cf-content" class="hidden space-y-8">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Current Rating</p>
+                                <p class="text-4xl font-black text-white"><span id="cf-rating"></span></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Max Rating</p>
+                                <p class="text-4xl font-black text-white"><span id="cf-max-rating"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Rank</p>
+                                <p id="cf-rank" class="text-sm text-cobaltLight font-mono mt-2 capitalize font-bold">Loading...</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Total Solved</p>
+                    <p id="cf-solved" class="text-4xl font-black text-gradient"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeChef -->
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div class="flex justify-between items-start mb-10">
+                        <h3 class="text-3xl font-black text-white flex items-center gap-4">
+                            <i class="fa-solid fa-fire text-amber-500 text-4xl" aria-hidden="true"></i>
+                            <span>CodeChef</span>
+                            <span id="cc-handle" class="ml-2 px-4 py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-sm font-bold">@band_deed_94</span>
+                        </h3>
+                        <a href="https://www.codechef.com/users/band_deed_94" target="_blank" aria-label="CodeChef profile" class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-amber-600 group-hover:text-white transition-all text-xl shadow-lg">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div id="cc-loader" class="text-amber-500 animate-pulse text-base font-mono bg-amber-500/10 p-5 rounded-2xl border border-amber-500/20 w-fit">Loading CodeChef statistics...</div>
+
+                <div id="cc-content" class="hidden space-y-8" aria-live="polite">
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Current Rating</p>
+                                <p id="cc-current" class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-500"></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Highest Rating</p>
+                                <p id="cc-highest" class="text-4xl font-black text-white"></p>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-800/80">
+                            <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-3">Stars</p>
+                            <div id="cc-stars" class="flex items-center gap-2 text-amber-500 text-xl" aria-label="CodeChef stars"></div>
+                        </div>
+                    </div>
+
+                    <div id="cc-fallback" class="hidden">
+                        <p class="text-gray-400 text-lg">Unable to load CodeChef statistics.</p>
+                    </div>
+                </div>
+
+                <!-- GreenOJ -->
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-green-500">
+                        <i class="fa-solid fa-leaf text-[250px]" aria-hidden="true"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-10 relative z-10">
+                        <h3 class="text-3xl font-black text-white flex items-center gap-4">
+                            <i class="fa-solid fa-leaf text-green-500 text-4xl" aria-hidden="true"></i>
+                            <span>GreenOJ</span>
+                            <span id="goj-handle" class="ml-2 px-4 py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-sm font-bold">@mitratanmoy246</span>
+                        </h3>
+                        <a href="#" target="_blank" aria-label="GreenOJ" class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-green-600 group-hover:text-white transition-all text-xl shadow-lg">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="space-y-8 relative z-10 mt-auto">
+                        <div>
+                            <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Platform</p>
+                            <p class="text-2xl font-bold text-gray-300">Green University OJ</p>
+                        </div>
+                        <div class="pt-6 border-t border-gray-800/80">
+                            <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-3">Solved</p>
+                            <p class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">53</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LeetCode -->
+                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-between group">
+                    <div class="flex justify-between items-start mb-10">
+                        <h3 class="text-3xl font-black text-white flex items-center gap-4">
+                            <i class="fa-solid fa-terminal text-yellow-500 text-4xl" aria-hidden="true"></i>
+                            <span>LeetCode</span>
+                            <span id="lc-handle" class="ml-2 px-4 py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-sm font-bold">@mitratanmoy246</span>
+                        </h3>
+                        <a href="https://leetcode.com/u/mitratanmoy246/" target="_blank" aria-label="LeetCode profile" class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-yellow-600 group-hover:text-white transition-all text-xl shadow-lg">
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div id="lc-loader" class="text-yellow-500 animate-pulse text-base font-mono bg-yellow-500/10 p-5 rounded-2xl border border-yellow-500/20 w-fit">Syncing LeetCode...</div>
+                    <div id="lc-content" class="hidden space-y-8">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Ranking</p>
+                                <p id="lc-ranking" class="text-4xl font-bold text-white"></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Total Solved</p>
+                                <p id="lc-solved" class="text-4xl font-black text-gradient"></p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="pt-4 pb-4 rounded-2xl bg-gray-900/60 border border-gray-800">
+                                <p class="text-gray-500 text-xs uppercase tracking-widest font-mono font-bold mb-2">Easy</p>
+                                <p id="lc-easy" class="text-xl font-black text-emerald-300">0</p>
+                            </div>
+                            <div class="pt-4 pb-4 rounded-2xl bg-gray-900/60 border border-gray-800">
+                                <p class="text-gray-500 text-xs uppercase tracking-widest font-mono font-bold mb-2">Medium</p>
+                                <p id="lc-medium" class="text-xl font-black text-cobaltLight">0</p>
+                            </div>
+                            <div class="pt-4 pb-4 rounded-2xl bg-gray-900/60 border border-gray-800">
+                                <p class="text-gray-500 text-xs uppercase tracking-widest font-mono font-bold mb-2">Hard</p>
+                                <p id="lc-hard" class="text-xl font-black text-rose-300">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="lc-fallback" class="hidden">
+                        <p class="text-gray-400 text-lg">LeetCode data could not be loaded.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-8">
+                <a href="https://vjudge.net/user/mitratanmoy246" target="_blank" aria-label="VJudge profile" class="flex-1 flex items-center justify-between p-8 glass-panel rounded-3xl group">
+                    <div>
+                        <h4 class="text-white font-black text-2xl mb-2 group-hover:text-cobaltLight transition-colors">Vjudge Profile</h4>
+                        <span class="font-mono text-base text-gray-500">vjudge.net/user/mitratanmoy246</span>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-xl">
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.hackerrank.com/mitratanmoy246" target="_blank" aria-label="HackerRank profile" class="flex-1 flex items-center justify-between p-8 glass-panel rounded-3xl group">
+                    <div>
+                        <h4 class="text-white font-black text-2xl mb-2 group-hover:text-cobaltLight transition-colors">HackerRank Profile</h4>
+                        <span class="font-mono text-base text-gray-500">hackerrank.com/mitratanmoy246</span>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-xl">
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4) ABOUT ME SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="About Me">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-12">
+                <div class="flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                        <i class="fa-solid fa-user-astronaut text-cobaltLight text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-black text-white tracking-tighter">About Me</h2>
+                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Competitive first</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <h3 class="text-3xl font-black text-white mb-6">Competitive programmer mindset</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        I am a Computer Science and Engineering student at Green University of Bangladesh and an active competitive programmer.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mt-5">
+                        My primary interests include algorithms, data structures, problem solving, and software development.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mt-5">
+                        I regularly participate in online programming contests and continuously work toward improving my competitive programming skills while preparing for future ICPC participation.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <h3 class="text-3xl font-black text-white mb-8 flex items-center gap-4">
+                        <i class="fa-solid fa-route text-cobaltLight" aria-hidden="true"></i> CP Journey
+                    </h3>
+
+                    <div class="relative pl-6">
+                        <div class="absolute left-2 top-0 bottom-0 w-[2px] bg-cobalt/60"></div>
+
+                        <div class="relative flex gap-6 mb-8">
+                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
+                            <div>
+                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2025</p>
+                                <p class="text-white font-black text-xl mt-1">Started Competitive Programming</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex gap-6 mb-8">
+                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
+                            <div>
+                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2026</p>
+                                <p class="text-white font-black text-xl mt-1">Active Contest Participant</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex gap-6">
+                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
+                            <div>
+                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2027 Goal</p>
+                                <p class="text-white font-black text-xl mt-1">ICPC Dhaka Regional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) SKILLS SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Skills">
+            <div class="flex items-center gap-6 mb-12">
+                <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                    <i class="fa-solid fa-sliders text-cobaltLight text-4xl" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl font-black text-white tracking-tighter">Skills</h2>
+                    <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Algorithms & contest craft</p>
+                </div>
+            </div>
+
+            <div class="glass-panel p-10 lg:p-14 rounded-[2.5rem]">
+                <div class="flex flex-wrap gap-4" id="skills-chips" aria-label="Skill chips">
+                    <span class="skill-chip">C++</span>
+                    <span class="skill-chip">STL</span>
+                    <span class="skill-chip">Data Structures</span>
+                    <span class="skill-chip">Algorithms</span>
+                    <span class="skill-chip">Binary Search</span>
+                    <span class="skill-chip">Greedy</span>
+                    <span class="skill-chip">C</span>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6) EDUCATION SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Education">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <div class="flex items-center gap-5 mb-10">
+                        <div class="w-16 h-16 rounded-2xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30">
+                            <i class="fa-solid fa-graduation-cap text-cobaltLight text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-white tracking-tight">Education</h3>
+                    </div>
+                    <h4 class="text-3xl font-bold text-white mb-4">B.Sc. in Computer Science & Engineering</h4>
+                    <p class="text-cobaltLight font-mono text-xl mb-4">Green University of Bangladesh</p>
+                    <p class="text-sm text-gray-500 uppercase tracking-widest font-black bg-gray-900 inline-block px-4 py-2 rounded-lg border border-gray-800">Currently Pursuing</p>
+                </div>
+
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <div class="flex items-center gap-5 mb-10">
+                        <div class="w-16 h-16 rounded-2xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30">
+                            <i class="fa-solid fa-microchip text-cobaltLight text-2xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-4xl font-black text-white tracking-tight">Contest & Dev Focus</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-bolt text-cobaltLight text-2xl mt-1" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white font-black text-xl">Problem Solving Workflow</p>
+                                <p class="text-gray-400 text-base leading-relaxed">Read → model → implement → verify → optimize.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-diagram-project text-cobaltLight text-2xl mt-1" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white font-black text-xl">Algorithms & DS Mastery</p>
+                                <p class="text-gray-400 text-base leading-relaxed">Diving deep into patterns used in ICPC.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-rotate text-cobaltLight text-2xl mt-1" aria-hidden="true"></i>
+                            <div>
+                                <p class="text-white font-black text-xl">Continuous Improvement</p>
+                                <p class="text-gray-400 text-base leading-relaxed">Progress via Codeforces, CodeChef, LeetCode, VJudge, and university contests.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7) CERTIFICATIONS SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Certifications">
+            <div class="flex items-center gap-6 mb-20">
+                <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                    <i class="fa-solid fa-certificate text-cobaltLight text-4xl" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl font-black text-white tracking-tighter">Verified Credentials</h2>
+                    <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Formal coursework & verification</p>
+                </div>
+            </div>
+
+            <div class="mb-24">
+                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-cobaltLight pl-6">Academic & Coursework</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-red-900/20 rounded-full blur-3xl group-hover:bg-red-800/40 transition-colors"></div>
+                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-cobaltLight transition-colors">CS50x: Intro to Computer Science</h4>
+                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">Harvard University / edX</p>
+                        <div class="mt-auto flex items-center justify-between relative z-10">
+                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">Dec 2025</div>
+                            <a href="https://courses.edx.org/certificates/adecc6c84a4241c9a4f777cb68bb3060" target="_blank" aria-label="Verify CS50x" class="px-6 py-3 bg-cobalt/15 hover:bg-cobalt text-cobaltLight hover:text-white border border-cobalt/40 rounded-xl font-bold text-base transition-all flex items-center gap-3">
+                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-900/20 rounded-full blur-3xl group-hover:bg-blue-800/40 transition-colors"></div>
+                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-cobaltLight transition-colors">Data Structures in C</h4>
+                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">University of Michigan / Coursera</p>
+                        <div class="mt-auto flex items-center justify-between relative z-10">
+                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">May 2026</div>
+                            <a href="https://coursera.org/verify/K0JV7I21BQPH" target="_blank" aria-label="Verify Data Structures in C" class="px-6 py-3 bg-cobalt/15 hover:bg-cobalt text-cobaltLight hover:text-white border border-cobalt/40 rounded-xl font-bold text-base transition-all flex items-center gap-3">
+                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-green-500 pl-6">Skill & Practical Verification</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-900/20 rounded-full blur-3xl group-hover:bg-yellow-800/40 transition-colors"></div>
+                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-yellow-400 transition-colors">Introduction to Javascript: The Basics</h4>
+                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">Coursera Project Network</p>
+                        <div class="mt-auto flex items-center justify-between relative z-10">
+                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">May 2026</div>
+                            <a href="https://coursera.org/verify/KO0W0P2T88MC" target="_blank" aria-label="Verify JS basics" class="px-6 py-3 bg-yellow-500/10 hover:bg-yellow-600 text-yellow-500 hover:text-white border border-yellow-500/30 rounded-xl font-bold text-base transition-all flex items-center gap-3">
+                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-900/20 rounded-full blur-3xl group-hover:bg-green-800/40 transition-colors"></div>
+                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-green-400 transition-colors">Problem Solving (Intermediate)</h4>
+                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">HackerRank</p>
+                        <div class="mt-auto flex items-center justify-between relative z-10">
+                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">10 May 2026</div>
+                            <a href="https://www.hackerrank.com/certificates/3124be3877fc" target="_blank" aria-label="Verify HackerRank certificate" class="px-6 py-3 bg-green-500/10 hover:bg-green-600 text-green-500 hover:text-white border border-green-500/30 rounded-xl font-bold text-base transition-all flex items-center gap-3">
+                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="View latest certifications on LinkedIn" class="inline-flex items-center justify-center w-full lg:w-auto gap-4 px-12 py-6 bg-cobalt text-white hover:bg-cobaltLight rounded-2xl transition-all font-black text-xl tracking-wide shadow-[0_0_30px_rgba(37,72,165,0.4)] hover:shadow-[0_0_50px_rgba(37,72,165,0.7)] hover:scale-[1.02]">
+                    <i class="fa-brands fa-linkedin text-3xl" aria-hidden="true"></i> View latest certifications on LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- 8) PROJECTS SECTION -->
+        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Projects">
+            <div class="flex flex-col md:flex-row items-start justify-between mb-16 gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
+                        <i class="fa-brands fa-github-alt text-cobaltLight text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-black text-white tracking-tighter">Project Vault</h2>
+                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Open-source implementations & competitive tooling</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-cobaltLight pl-6">Soft Projects <span class="text-gray-500 font-bold text-lg ml-3 tracking-normal">(Live from GitHub)</span></h3>
+
+                <div id="github-loader" class="text-cobaltLight animate-pulse text-base font-mono bg-cobalt/10 p-6 rounded-2xl border border-cobalt/20 w-fit mb-10">Fetching latest repositories via API...</div>
+
+                <div id="github-repos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden" aria-label="GitHub repositories"></div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-gray-900/50 border border-gray-800 rounded-2xl mb-6">
+                    <i class="fa-brands fa-github text-cobaltLight text-xl" aria-hidden="true"></i>
+                    <span class="font-mono text-sm font-bold text-gray-300">GitHub: mitratanmoy246</span>
+                </div>
+                <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="All GitHub repositories" class="inline-flex items-center gap-4 px-12 py-6 bg-transparent border-[3px] border-cobalt text-cobaltLight hover:bg-cobalt hover:text-white rounded-2xl transition-all font-black text-xl tracking-wide shadow-[0_0_20px_rgba(37,72,165,0.2)] hover:shadow-[0_0_40px_rgba(37,72,165,0.5)]">
+                    <i class="fa-brands fa-github text-3xl" aria-hidden="true"></i> View All Repositories on GitHub
+                </a>
+            </div>
+
+        </section>
+
+        <!-- 9) CONTACT / FOOTER -->
+        <section class="py-8 lg:py-14 border-t border-gray-900/50" aria-label="Contact">
+            <div class="glass-panel p-10 lg:p-14 rounded-[2.5rem] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+                <div>
+                    <h2 class="text-4xl font-black text-white">Contact</h2>
+                    <p class="text-gray-400 text-lg mt-2">For contest collaborations, ICPC preparation, or software projects.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-5 w-full lg:w-auto">
+                    <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email Tanmoy" class="flex items-center justify-center gap-3 px-10 py-5 bg-cobalt text-white hover:bg-cobaltLight rounded-2xl transition-all font-black text-lg tracking-wide">
+                        <i class="fa-solid fa-envelope text-xl" aria-hidden="true"></i> Email
+                    </a>
+                    <a href="resume.pdf" target="_blank" aria-label="Download resume" class="flex items-center justify-center gap-3 px-10 py-5 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-lg">
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="border-t border-gray-900 bg-black pt-20 pb-10 relative z-10" aria-label="Footer">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
+                <div class="text-center md:text-left">
+                    <h3 class="text-4xl font-black text-white tracking-tighter mb-2">Tanmoy <span class="text-cobaltLight">Mitra</span></h3>
+                    <p class="text-gray-500 text-lg font-bold">Competitive Programmer</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="GitHub" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="LinkedIn" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-gray-900/80">
+                <p class="text-gray-600 text-base font-bold">© 2026 Tanmoy Mitra. All rights reserved.</p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="text-gray-500 hover:text-white text-base font-black uppercase tracking-widest flex items-center gap-3 transition-colors bg-gray-900 px-6 py-3 rounded-xl border border-gray-800 hover:border-gray-600">
+                    Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Shared helpers ---
+        function animateCounter(el, to, duration = 1000) {
+            const from = 0;
+            const diff = (to || 0) - from;
+            const start = performance.now();
+
+            function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+            function step(now) {
+                const t = Math.min(1, (now - start) / duration);
+                const v = Math.round(from + diff * easeOutCubic(t));
+                el.textContent = (v ?? 0).toLocaleString();
+                if (t < 1) requestAnimationFrame(step);
+            }
+
+            requestAnimationFrame(step);
+        }
+
+        function renderStars(container, count) {
+            const safe = Number(count);
+            const n = Number.isFinite(safe) && safe > 0 ? safe : 0;
+            let html = '';
+            for (let i = 0; i < n; i++) html += '<i class="fa-solid fa-star"></i>';
+            container.innerHTML = html;
+        }
+
+        // --- Codeforces (unique accepted: contestId-index) ---
+        async function fetchCodeforces() {
+            const handle = 'mitratanmoy246';
+            const loader = document.getElementById('cf-loader');
+            const content = document.getElementById('cf-content');
+
+            try {
+                const infoRes = await fetch(`https://codeforces.com/api/user.info?handles=${encodeURIComponent(handle)}`);
+                const infoJson = await infoRes.json();
+
+                if (infoJson.status !== 'OK' || !infoJson.result || !infoJson.result[0]) throw new Error('CF user.info failed');
+
+                const info = infoJson.result[0];
+                const statusRes = await fetch(`https://codeforces.com/api/user.status?handle=${encodeURIComponent(handle)}&from=1&count=50000`);
+                const statusJson = await statusRes.json();
+                if (statusJson.status !== 'OK') throw new Error('CF user.status failed');
+
+                const solvedSet = new Set();
+                (statusJson.result || [])
+                    .filter(sub => sub.verdict === 'OK' && sub.problem && sub.problem.contestId != null && sub.problem.index != null)
+                    .forEach(sub => solvedSet.add(`${sub.problem.contestId}-${sub.problem.index}`));
+
+                const current = info.rating ?? 'N/A';
+                const maxRating = info.maxRating ?? 'N/A';
+                const rank = info.rank ?? info.maxRank ?? 'Unrated';
+
+                // Color-hint for handle by rating & rank
+                const cfHandle = document.getElementById('cf-handle');
+                if (cfHandle) {
+                    const rNum = Number(current);
+                    const rankNum = Number(info.rank);
+                    let color = 'border-gray-800 text-gray-300';
+                    if (Number.isFinite(rNum) && rNum >= 2200) color = 'border-cobaltLight text-cobaltLight';
+                    else if (Number.isFinite(rNum) && rNum >= 1800) color = 'border-cobalt text-white';
+                    else if (Number.isFinite(rankNum) && rankNum <= 1000) color = 'border-yellow-400 text-yellow-200';
+                    cfHandle.className = `ml-2 px-4 py-2 bg-gray-900/60 border rounded-xl font-mono text-sm font-bold ${color}`;
+                }
+
+                const solved = solvedSet.size;
+
+                document.getElementById('cf-rating').textContent = current;
+                document.getElementById('cf-max-rating').textContent = maxRating;
+                document.getElementById('cf-rank').textContent = String(rank);
+                document.getElementById('cf-solved').textContent = solved.toLocaleString();
+
+                // Achievements cards
+                const achMax = Number(maxRating);
+                document.getElementById('ach-cf-max-rank').textContent = String(rank);
+                document.getElementById('ach-cf-max-rating').textContent = '0';
+                animateCounter(document.getElementById('ach-cf-max-rating'), Number.isFinite(achMax) ? achMax : 0, 900);
+                animateCounter(document.getElementById('ach-total-solved'), solved, 900);
+
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+            } catch (e) {
+                loader.textContent = 'Failed to sync Codeforces.';
+            }
+        }
+
+        // --- CodeChef (live stats via third-party API; no stats.json dependency) ---
+        async function fetchCodeChef() {
+            const user = 'band_deed_94';
+            const loader = document.getElementById('cc-loader');
+            const content = document.getElementById('cc-content');
+            const fallback = document.getElementById('cc-fallback');
+
+            try {
+                // 1) Primary (verified working per your link)
+                let data = null;
+                {
+                    const url = `https://codechef-stats-api-two.vercel.app/profile/${encodeURIComponent(user)}`;
+                    const res = await fetch(url);
+                    if (res.ok) data = await res.json();
+                }
+
+                // 2) Fallback A (best-effort)
+                if (!data) {
+                    const url = `https://codechef-api.vercel.app/api/codechef/${encodeURIComponent(user)}`;
+                    const res = await fetch(url);
+                    if (res.ok) data = await res.json();
+                }
+
+                // 3) Fallback B (best-effort)
+                if (!data) {
+                    const url = `https://competitive-coding.azurewebsites.net/api/codechef?username=${encodeURIComponent(user)}`;
+                    const res = await fetch(url);
+                    if (res.ok) data = await res.json();
+                }
+
+                // API shape: {success,status,handle,profile:{currentRating,highestRating,stars("1★"),...}}
+                const profile = data?.profile || data;
+                const currentRating = profile?.currentRating ?? profile?.rating ?? profile?.current;
+                const highestRating = profile?.highestRating ?? profile?.maxRating ?? profile?.highest;
+
+                // stars comes like "1★" in the API response
+                const starsRaw = profile?.stars ?? profile?.starCount ?? profile?.star_count ?? 0;
+                const starsStr = String(starsRaw);
+                const stars = parseInt(starsStr.replace(/[^0-9]/g, ''), 10) || 0;
+
+
+                if (currentRating == null || highestRating == null) throw new Error('Unable to parse CodeChef stats');
+
+                document.getElementById('cc-current').textContent = Number(currentRating).toLocaleString();
+                document.getElementById('cc-highest').textContent = Number(highestRating).toLocaleString();
+                renderStars(document.getElementById('cc-stars'), Number(stars) || 0);
+
+                // Achievements cards
+                animateCounter(document.getElementById('ach-cc-current'), Number(currentRating) || 0, 900);
+                document.getElementById('ach-cc-current').textContent = document.getElementById('ach-cc-current').textContent;
+                renderStars(document.getElementById('ach-cc-stars'), Number(stars) || 0);
+
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+            } catch (e) {
+                loader.classList.add('hidden');
+                fallback.classList.remove('hidden');
+            }
+        }
+
+
+        // --- LeetCode (keep dynamic API, display ranking/solved/easy/medium/hard; graceful fallback) ---
+        async function fetchLeetCode() {
+            const loader = document.getElementById('lc-loader');
+            const content = document.getElementById('lc-content');
+            const fallback = document.getElementById('lc-fallback');
+
+            try {
+                const res = await fetch('https://alfa-leetcode-api.onrender.com/mitratanmoy246');
+                if (!res.ok) throw new Error('LC API failed');
+                const data = await res.json();
+
+                // Best-effort mapping depending on API payload
+                const ranking = data.ranking ?? data.globalRanking ?? data.rank ?? 'N/A';
+                const totalSolved = data.totalSolved ?? data.solved ?? 0;
+                const easy = data.easySolved ?? data.easy ?? 0;
+                const medium = data.mediumSolved ?? data.medium ?? 0;
+                const hard = data.hardSolved ?? data.hard ?? 0;
+
+                document.getElementById('lc-ranking').textContent = ranking;
+                document.getElementById('lc-solved').textContent = Number(totalSolved).toLocaleString();
+                document.getElementById('lc-easy').textContent = Number(easy).toLocaleString();
+                document.getElementById('lc-medium').textContent = Number(medium).toLocaleString();
+                document.getElementById('lc-hard').textContent = Number(hard).toLocaleString();
+
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+            } catch (e) {
+                loader.classList.add('hidden');
+                fallback.classList.remove('hidden');
+                // Ensure values are not blank
+                document.getElementById('lc-ranking').textContent = 'N/A';
+                document.getElementById('lc-solved').textContent = '0';
+                document.getElementById('lc-easy').textContent = '0';
+                document.getElementById('lc-medium').textContent = '0';
+                document.getElementById('lc-hard').textContent = '0';
+            }
+        }
+
+        // --- Skills chip entrance animation ---
+        function animateSkillChips() {
+            const chips = document.querySelectorAll('.skill-chip');
+            const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            chips.forEach((chip, i) => {
+                if (reduced) {
+                    chip.classList.add('in');
+                } else {
+                    setTimeout(() => chip.classList.add('in'), 120 + i * 70);
+                }
+            });
+        }
+
+        // --- GitHub repos (increase 6 -> 9; display required fields) ---
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('github-repos');
+            const loader = document.getElementById('github-loader');
+            try {
+                const res = await fetch('https://api.github.com/users/mitratanmoy246/repos?sort=updated&per_page=9');
+                if (!res.ok) throw new Error('GitHub API Error');
+                const repos = await res.json();
+
+                if (repos.length > 0) {
+                    let html = '';
+                    repos.forEach(repo => {
+                        let langColor = 'bg-gray-500';
+                        if (repo.language === 'C++') langColor = 'bg-pink-500';
+                        else if (repo.language === 'C') langColor = 'bg-gray-400';
+                        else if (repo.language === 'JavaScript') langColor = 'bg-yellow-400';
+                        else if (repo.language === 'HTML') langColor = 'bg-orange-500';
+
+                        html += `
+                            <a href="${repo.html_url}" target="_blank" aria-label="Repository ${repo.name}" class="glass-panel p-8 rounded-3xl flex flex-col h-full group hover:border-cobaltLight">
+                                <div class="flex items-start justify-between mb-5">
+                                    <h4 class="text-xl font-bold text-white group-hover:text-cobaltLight transition-colors line-clamp-1 flex items-center gap-3">
+                                        <i class="fa-regular fa-folder text-cobalt" aria-hidden="true"></i> ${repo.name}
+                                    </h4>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-base group-hover:text-cobaltLight transition-colors" aria-hidden="true"></i>
+                                </div>
+                                <p class="text-gray-400 text-base mb-6 line-clamp-2">${repo.description ? repo.description : 'No description provided.'}</p>
+
+                                <div class="flex flex-wrap items-center gap-2 mb-4">
+                                    ${repo.language ? `<span class="flex items-center gap-2 text-sm text-gray-300 font-bold"><span class="w-3 h-3 rounded-full ${langColor}"></span> ${repo.language}</span>` : ''}
+                                </div>
+
+                                <div class="flex items-center gap-5 mt-auto pt-4 border-t border-gray-800">
+                                    <span class="flex items-center gap-1.5 text-sm font-bold text-gray-500"><i class="fa-regular fa-star text-gray-400" aria-hidden="true"></i> ${repo.stargazers_count}</span>
+                                    <span class="flex items-center gap-1.5 text-sm font-bold text-gray-500"><i class="fa-solid fa-code-fork text-gray-400" aria-hidden="true"></i> ${repo.forks_count}</span>
+                                </div>
+
+                                <div class="text-xs text-gray-500 font-mono mt-3">
+                                    Last updated: ${repo.updated_at ? new Date(repo.updated_at).toLocaleDateString() : 'N/A'}
+                                </div>
+                            </a>
+                        `;
+                    });
+
+                    container.innerHTML = html;
+                    loader.classList.add('hidden');
+                    container.classList.remove('hidden');
+                } else {
+                    loader.textContent = 'No public repositories found.';
+                }
+            } catch (error) {
+                loader.textContent = 'Failed to load GitHub repositories.';
+            }
+        }
+
+        // --- Boot ---
+        window.addEventListener('load', () => {
+            animateSkillChips();
+            fetchCodeforces();
+            fetchCodeChef();
+            fetchLeetCode();
+            fetchGitHubRepos();
+        });
+    </script>
+</body>
+</html>
+
