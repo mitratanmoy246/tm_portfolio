@@ -131,7 +131,7 @@ async function fetchCodeChef() {
         // Fetch Profile and Graph history concurrently
         const [data, graphRes] = await Promise.all([
             fetchProfileData(),
-            fetch(`https://codechef-stats-api-two.vercel.app/rating/${encodeURIComponent(user)}`).catch(() => null)
+            fetch(`https://codechef-stats-api-two.vercel.app/kryven/rating`).catch(() => null)
         ]);
 
         const profile = data?.profile || data;
