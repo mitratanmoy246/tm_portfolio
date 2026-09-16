@@ -102,7 +102,7 @@ async function fetchCodeforces() {
 
 // --- CodeChef Fetch & Chart Render ---
 async function fetchCodeChef() {
-    const user = 'band_deed_94';
+    const user = 'kryven';
     const loader = document.getElementById('cc-loader');
     const content = document.getElementById('cc-content');
     const fallback = document.getElementById('cc-fallback');
