@@ -1,577 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tanmoy Mitra | Competitive Programmer</title>
-    <meta name="theme-color" content="#2548a5">
-    <meta name="description" content="Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC." />
-    <meta name="keywords" content="competitive programming, ICPC, algorithms, data structures, Codeforces, CodeChef, LeetCode, VJudge, HackerRank, Green University of Bangladesh" />
+    <meta name="theme-color" content="#020202">
+    <meta name="description" content="Tanmoy Mitra — Computer Science student, competitive programmer, developer and designer.">
 
-    <meta property="og:title" content="Tanmoy Mitra | Competitive Programmer" />
-    <meta property="og:description" content="Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC." />
-    <meta property="og:type" content="website" />
+    <title>Tanmoy Mitra — System Terminal</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script src="tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <script src="utils.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 
-<body class="bg-darkBg text-gray-300 min-h-screen cyber-grid relative overflow-x-hidden selection:bg-cobalt selection:text-white">
+<body>
 
-    <div class="fixed top-[-10%] left-[50%] -translate-x-1/2 w-[1000px] h-[1000px] bg-cobalt opacity-[0.12] blur-[120px] rounded-full pointer-events-none z-0"></div>
-    <div class="fixed bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-cobaltLight opacity-[0.08] blur-[80px] rounded-full pointer-events-none z-0"></div>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <header class="header">
+        <a href="#top" class="brand">
+            <span class="brand-box">TM</span>
+            <span class="brand-text">SYS.TM // 01</span>
+        </a>
 
-        <header class="min-h-[95vh] flex flex-col justify-center pt-24 pb-20" aria-label="Hero">
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
-                <div class="flex-1">
-                    <div class="inline-flex items-center gap-3 px-5 py-2 bg-cobalt/15 border border-cobalt/40 rounded-full text-cobaltLight text-sm font-mono mb-10 uppercase tracking-widest backdrop-blur-md shadow-[0_0_20px_rgba(37,72,165,0.3)]">
-                        <i class="fa-solid fa-bolt animate-pulse text-yellow-400" aria-hidden="true"></i> 
-                    </div>
+        <nav>
+            <a href="#work">WORK</a>
+            <a href="#engineering">SYSTEMS</a>
+            <a href="#stats">TELEMETRY</a>
+            <a href="#about">ABOUT</a>
+        </nav>
 
-                    <h1 class="text-5xl md:text-7xl lg:text-9xl font-black text-white mb-6 tracking-tighter drop-shadow-2xl leading-none">
-                        Tanmoy <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cobaltLight to-blue-200">Mitra</span>
-                    </h1>
+        <a href="#contact" class="header-contact">
+            CONNECT ↗
+        </a>
+    </header>
 
-                    <h2 class="text-3xl lg:text-4xl text-gray-300 font-bold mb-10 font-mono border-l-8 border-cobalt pl-6">
-                        > Competitive Programmer_
-                    </h2>
 
-                    <p class="text-xl lg:text-2xl max-w-3xl text-gray-400 leading-relaxed mb-14">
-                        Competitive Programmer and CSE student at Green University of Bangladesh. Focused on algorithms, data structures, problem solving, and programming contests. Actively preparing for ICPC while continuously improving through Codeforces, CodeChef, LeetCode, VJudge, and university contests.
-                    </p>
+    <main id="top">
 
-                    <div class="flex flex-wrap gap-5">
-                        <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email" class="flex items-center gap-3 px-8 py-4 bg-cobalt text-white hover:bg-cobaltLight hover:shadow-[0_0_30px_rgba(37,72,165,0.6)] rounded-2xl transition-all font-bold text-base tracking-wide">
-                            <i class="fa-solid fa-envelope text-xl" aria-hidden="true"></i> contact.tanmoy.mitra@gmail.com
-                        </a>
-
-                        <a href="resume.pdf" aria-label="Resume" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
-                            <i class="fa-solid fa-file-arrow-down text-xl" aria-hidden="true"></i> Resume
-                        </a>
-
-                        <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="GitHub" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
-                            <i class="fa-brands fa-github text-xl" aria-hidden="true"></i> GitHub
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="LinkedIn" class="flex items-center gap-3 px-8 py-4 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-base tracking-wide">
-                            <i class="fa-brands fa-linkedin text-xl" aria-hidden="true"></i> LinkedIn
-                        </a>
-                    </div>
+        <!-- HERO -->
+        <section class="hero section">
+            <div class="hero-content reveal">
+                
+                <div class="hud-top">
+                    <span class="live-dot"></span>
+                    <span>CONNECTION ESTABLISHED</span>
+                    <span class="hud-time">UTC+6</span>
                 </div>
 
-                <div class="shrink-0 relative group" aria-label="Profile image">
-                    <div class="absolute inset-0 bg-cobalt rounded-full blur-[80px] opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
-                    <img src="Profile picture.jpeg" alt="Portrait of Tanmoy Mitra" class="relative w-80 h-80 lg:w-[500px] lg:h-[500px] object-cover rounded-full border-[8px] border-panelBg shadow-[0_0_0_4px_rgba(37,72,165,0.8)] z-10 grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.03]" onerror="this.src='https://placehold.co/500x500/0a0a0a/2548a5?text=TM'">
-                </div>
-            </div>
-        </header>
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <h1>
+                            TANMOY<br>MITRA
+                        </h1>
 
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Achievements">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
-                <div class="flex items-center gap-6">
-                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                        <i class="fa-solid fa-trophy text-cobaltLight text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter">Achievements</h2>
-                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Dynamic contest stats</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col min-w-0">
-                    <div class="flex items-center gap-4 mb-6">
-                        <i class="fa-solid fa-gavel text-cobaltLight text-3xl shrink-0" aria-hidden="true"></i>
-                        <h3 class="text-xl sm:text-2xl font-black text-white truncate">Codeforces Max Rating</h3>
-                    </div>
-                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Max Rating</p>
-                    <p id="ach-cf-max-rating" class="text-5xl font-black text-gradient">0</p>
-                    <p id="ach-cf-max-rank" class="text-sm text-cobaltLight font-mono mt-2 font-bold truncate">Loading...</p>
-                </div>
-
-                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col min-w-0">
-                    <div class="flex items-center gap-4 mb-6">
-                        <i class="fa-solid fa-fire text-amber-500 text-3xl shrink-0" aria-hidden="true"></i>
-                        <h3 class="text-xl sm:text-2xl font-black text-white truncate">Current CodeChef Rating</h3>
-                    </div>
-                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Current Rating</p>
-                    <p id="ach-cc-current" class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-500">0</p>
-                    <div id="ach-cc-stars" class="flex flex-wrap items-center gap-1.5 text-amber-500 text-xl mt-4" aria-label="CodeChef stars"></div>
-                </div>
-
-                <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col min-w-0 md:col-span-2 lg:col-span-2">
-                    <div class="flex items-center gap-4 mb-6">
-                        <i class="fa-solid fa-check-double text-green-400 text-3xl shrink-0" aria-hidden="true"></i>
-                        <h3 class="text-xl sm:text-2xl font-black text-white truncate">Total Problems Solved</h3>
-                    </div>
-                    <p class="text-gray-500 text-sm uppercase tracking-widest font-mono font-bold mb-2">Total Unique Accepted</p>
-                    <p id="ach-total-solved" class="text-5xl font-black text-gradient">0</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Live competitive programming stats">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 gap-6">
-                <div class="flex items-center gap-6">
-                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                        <i class="fa-solid fa-bullseye text-cobaltLight text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tighter">Live Competitive Programming Stats</h2>
-                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Competitive programmer focus</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-                <div class="glass-panel p-8 sm:p-10 rounded-[2.5rem] flex flex-col justify-between group min-w-0">
-                    <div class="flex justify-between items-start mb-10 gap-4">
-                        <h3 class="text-2xl sm:text-3xl font-black text-white flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
-                            <i class="fa-solid fa-code text-cobaltLight text-3xl sm:text-4xl shrink-0" aria-hidden="true"></i>
-                            <span class="shrink-0">Codeforces</span>
-                            <span id="cf-handle" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-xs sm:text-sm font-bold truncate max-w-full">@mitratanmoy246</span>
-                        </h3>
-                        <a href="https://codeforces.com/profile/mitratanmoy246" target="_blank" aria-label="Codeforces profile" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-lg sm:text-xl shadow-lg">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div id="cf-loader" class="text-cobaltLight animate-pulse text-sm sm:text-base font-mono bg-cobalt/10 p-4 sm:p-5 rounded-2xl border border-cobalt/20 w-fit">Syncing Codeforces...</div>
-                    <div id="cf-content" class="hidden space-y-8 overflow-hidden">
-                        <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Current Rating</p>
-                                <p class="text-3xl sm:text-4xl font-black text-white truncate"><span id="cf-rating"></span></p>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Max Rating</p>
-                                <p class="text-3xl sm:text-4xl font-black text-white truncate"><span id="cf-max-rating"></span></p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Rank</p>
-                                <p id="cf-rank" class="text-sm text-cobaltLight font-mono mt-2 capitalize font-bold truncate">Loading...</p>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Total Solved</p>
-                                <p id="cf-solved" class="text-3xl sm:text-4xl font-black text-gradient truncate"></p>
-                            </div>
-                        </div>
-
-                        <div class="relative w-full h-48 sm:h-56 mt-6 border-t border-gray-800/80 pt-6">
-                            <canvas id="cfChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-10 rounded-[2.5rem] flex flex-col justify-between group min-w-0">
-                    <div class="flex justify-between items-start mb-10 gap-4">
-                        <h3 class="text-2xl sm:text-3xl font-black text-white flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
-                            <i class="fa-solid fa-fire text-amber-500 text-3xl sm:text-4xl shrink-0" aria-hidden="true"></i>
-                            <span class="shrink-0">CodeChef</span>
-                            <span id="cc-handle" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-xs sm:text-sm font-bold truncate max-w-full">@band_deed_94</span>
-                        </h3>
-                        <a href="https://www.codechef.com/users/band_deed_94" target="_blank" aria-label="CodeChef profile" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-amber-600 group-hover:text-white transition-all text-lg sm:text-xl shadow-lg">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div id="cc-loader" class="text-amber-500 animate-pulse text-sm sm:text-base font-mono bg-amber-500/10 p-4 sm:p-5 rounded-2xl border border-amber-500/20 w-fit">Loading CodeChef statistics...</div>
-
-                    <div id="cc-content" class="hidden space-y-8 overflow-hidden" aria-live="polite">
-                        <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Current Rating</p>
-                                <p id="cc-current" class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-500 truncate"></p>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Highest Rating</p>
-                                <p id="cc-highest" class="text-3xl sm:text-4xl font-black text-white truncate"></p>
-                            </div>
-                        </div>
-
-                        <div class="pt-6 border-t border-gray-800/80">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-3 truncate">Stars</p>
-                            <div id="cc-stars" class="flex flex-wrap items-center gap-2 text-amber-500 text-xl" aria-label="CodeChef stars"></div>
-                        </div>
-
-                        <div class="relative w-full h-48 sm:h-56 mt-6 border-t border-gray-800/80 pt-6">
-                            <canvas id="ccChart"></canvas>
-                        </div>
-                    </div>
-
-                    <div id="cc-fallback" class="hidden">
-                        <p class="text-gray-400 text-lg">Unable to load CodeChef statistics.</p>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-10 rounded-[2.5rem] flex flex-col justify-between group relative overflow-hidden min-w-0">
-                    <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-green-500 pointer-events-none">
-                        <i class="fa-solid fa-leaf text-[200px] sm:text-[250px]" aria-hidden="true"></i>
-                    </div>
-                    <div class="flex justify-between items-start mb-10 relative z-10 gap-4">
-                        <h3 class="text-2xl sm:text-3xl font-black text-white flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
-                            <i class="fa-solid fa-leaf text-green-500 text-3xl sm:text-4xl shrink-0" aria-hidden="true"></i>
-                            <span class="shrink-0">GreenOJ</span>
-                            <span id="goj-handle" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-xs sm:text-sm font-bold truncate max-w-full">@mitratanmoy246</span>
-                        </h3>
-                        <a href="https://greenoj.bd/user/userProfile/mitratanmoy246" target="_blank" rel="noopener noreferrer" aria-label="GreenOJ" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-green-600 group-hover:text-white transition-all text-lg sm:text-xl shadow-lg">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="space-y-8 relative z-10 mt-auto">
-                        <div class="min-w-0">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Platform</p>
-                            <p class="text-xl sm:text-2xl font-bold text-gray-300 truncate">Green University OJ</p>
-                        </div>
-                        <div class="pt-6 border-t border-gray-800/80 min-w-0">
-                            <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-3 truncate">Solved</p>
-                            <p class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 truncate">79</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-10 rounded-[2.5rem] flex flex-col justify-between group min-w-0">
-                    <div class="flex justify-between items-start mb-10 gap-4">
-                        <h3 class="text-2xl sm:text-3xl font-black text-white flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
-                            <i class="fa-solid fa-terminal text-yellow-500 text-3xl sm:text-4xl shrink-0" aria-hidden="true"></i>
-                            <span class="shrink-0">LeetCode</span>
-                            <span id="lc-handle" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-900/60 border border-gray-800 rounded-xl font-mono text-xs sm:text-sm font-bold truncate max-w-full">@mitratanmoy246</span>
-                        </h3>
-                        <a href="https://leetcode.com/u/mitratanmoy246/" target="_blank" aria-label="LeetCode profile" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-yellow-600 group-hover:text-white transition-all text-lg sm:text-xl shadow-lg">
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <div id="lc-loader" class="text-yellow-500 animate-pulse text-sm sm:text-base font-mono bg-yellow-500/10 p-4 sm:p-5 rounded-2xl border border-yellow-500/20 w-fit">Syncing LeetCode...</div>
-                    <div id="lc-content" class="hidden space-y-8">
-                        <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Ranking</p>
-                                <p id="lc-ranking" class="text-3xl sm:text-4xl font-bold text-white truncate"></p>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-gray-500 text-xs sm:text-sm uppercase tracking-widest font-mono font-bold mb-2 truncate">Total Solved</p>
-                                <p id="lc-solved" class="text-3xl sm:text-4xl font-black text-gradient truncate"></p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-3 gap-3 sm:gap-4">
-                            <div class="pt-3 pb-3 sm:pt-4 sm:pb-4 rounded-2xl bg-gray-900/60 border border-gray-800 text-center sm:text-left sm:pl-4 min-w-0">
-                                <p class="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-mono font-bold mb-1 sm:mb-2 truncate">Easy</p>
-                                <p id="lc-easy" class="text-lg sm:text-xl font-black text-emerald-300 truncate">0</p>
-                            </div>
-                            <div class="pt-3 pb-3 sm:pt-4 sm:pb-4 rounded-2xl bg-gray-900/60 border border-gray-800 text-center sm:text-left sm:pl-4 min-w-0">
-                                <p class="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-mono font-bold mb-1 sm:mb-2 truncate">Medium</p>
-                                <p id="lc-medium" class="text-lg sm:text-xl font-black text-cobaltLight truncate">0</p>
-                            </div>
-                            <div class="pt-3 pb-3 sm:pt-4 sm:pb-4 rounded-2xl bg-gray-900/60 border border-gray-800 text-center sm:text-left sm:pl-4 min-w-0">
-                                <p class="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-mono font-bold mb-1 sm:mb-2 truncate">Hard</p>
-                                <p id="lc-hard" class="text-lg sm:text-xl font-black text-rose-300 truncate">0</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="lc-fallback" class="hidden">
-                        <p class="text-gray-400 text-lg">LeetCode data could not be loaded.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 min-w-0">
-                <a href="https://vjudge.net/user/mitratanmoy246" target="_blank" aria-label="VJudge profile" class="flex-1 flex items-center justify-between p-6 sm:p-8 glass-panel rounded-3xl group min-w-0">
-                    <div class="min-w-0 pr-4">
-                        <h4 class="text-white font-black text-xl sm:text-2xl mb-1 sm:mb-2 group-hover:text-cobaltLight transition-colors truncate">Vjudge Profile</h4>
-                        <span class="font-mono text-sm sm:text-base text-gray-500 truncate block">vjudge.net/user/mitratanmoy246</span>
-                    </div>
-                    <div class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-lg sm:text-xl">
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </div>
-                </a>
-
-                <a href="https://www.hackerrank.com/mitratanmoy246" target="_blank" aria-label="HackerRank profile" class="flex-1 flex items-center justify-between p-6 sm:p-8 glass-panel rounded-3xl group min-w-0">
-                    <div class="min-w-0 pr-4">
-                        <h4 class="text-white font-black text-xl sm:text-2xl mb-1 sm:mb-2 group-hover:text-cobaltLight transition-colors truncate">HackerRank Profile</h4>
-                        <span class="font-mono text-sm sm:text-base text-gray-500 truncate block">hackerrank.com/mitratanmoy246</span>
-                    </div>
-                    <div class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 group-hover:bg-cobalt group-hover:text-white transition-all text-lg sm:text-xl">
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="About Me">
-            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-12">
-                <div class="flex items-center gap-6">
-                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                        <i class="fa-solid fa-user-astronaut text-cobaltLight text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-5xl font-black text-white tracking-tighter">About Me</h2>
-                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Competitive first</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="glass-panel p-12 rounded-[2.5rem]">
-                    <h3 class="text-3xl font-black text-white mb-6">Competitive programmer mindset</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        I am a Computer Science and Engineering student at Green University of Bangladesh and an active competitive programmer.
-                    </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mt-5">
-                        My primary interests include algorithms, data structures, problem solving, and software development.
-                    </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mt-5">
-                        I regularly participate in online programming contests and continuously work toward improving my competitive programming skills while preparing for future ICPC participation.
-                    </p>
-                </div>
-
-                <div class="glass-panel p-12 rounded-[2.5rem]">
-                    <h3 class="text-3xl font-black text-white mb-8 flex items-center gap-4">
-                        <i class="fa-solid fa-route text-cobaltLight" aria-hidden="true"></i> CP Journey
-                    </h3>
-
-                    <div class="relative pl-6">
-                        <div class="absolute left-2 top-0 bottom-0 w-[2px] bg-cobalt/60"></div>
-
-                        <div class="relative flex gap-6 mb-8">
-                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
+                        <div class="hero-bottom">
+                            <div class="hero-idx">00 / 01</div>
                             <div>
-                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2025</p>
-                                <p class="text-white font-black text-xl mt-1">Started Competitive Programming</p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex gap-6 mb-8">
-                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
-                            <div>
-                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2026</p>
-                                <p class="text-white font-black text-xl mt-1">Active Contest Participant</p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex gap-6">
-                            <div class="w-8 h-8 rounded-full bg-cobalt flex-shrink-0 mt-1 border border-cobaltLight shadow-[0_0_20px_rgba(37,72,165,0.5)]"></div>
-                            <div>
-                                <p class="text-cobaltLight font-mono uppercase tracking-widest text-sm font-bold">2027 Goal</p>
-                                <p class="text-white font-black text-xl mt-1">Reaching 4* on codechef and expert on codeforces</p>
+                                <p>
+                                    Computer Science student, competitive programmer and digital builder. Focusing on low-level logic, scalable systems, and minimalist interfaces.
+                                </p>
+                                <div class="hero-links">
+                                    <a href="#work" class="btn-primary">ACCESS WORKSPACE ↓</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="hero-right">
+                        <div class="portrait-container">
+                            <img 
+                                src="Profile picture.jpeg" 
+                                alt="Tanmoy Mitra"
+                                onerror="this.style.display='none';this.parentElement.classList.add('image-missing')"
+                            >
+                            <div class="portrait-fallback">
+                                <strong>TM</strong>
+                                <span>SYS_IMG_MISSING</span>
+                            </div>
+                            <div class="portrait-overlay"></div>
+                            <div class="portrait-corners"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- INTRO -->
+        <section class="intro section" id="about">
+            <div class="section-label">01 // IDENTITY</div>
+            
+            <h2 class="reveal">
+                I build systems to understand<br>
+                <span>how the layers connect.</span>
+            </h2>
+
+            <div class="intro-grid reveal">
+                <p class="lead-text">
+                    From competitive programming algorithms to frontend interfaces and hardware prototypes.
+                </p>
+                <div class="intro-desc">
+                    <p>
+                        Competitive programming trains precise execution. Web development translates logic into interaction. Electronics bridges code to the physical world.
+                    </p>
+                    <p>
+                        My workspace is a continuous integration of these disciplines, stripped of unnecessary complexity.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Skills">
-            <div class="flex items-center gap-6 mb-12">
-                <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                    <i class="fa-solid fa-sliders text-cobaltLight text-4xl" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <h2 class="text-5xl font-black text-white tracking-tighter">Skills</h2>
-                    <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Algorithms & contest craft</p>
-                </div>
-            </div>
 
-            <div class="glass-panel p-10 lg:p-14 rounded-[2.5rem]">
-                <div class="flex flex-wrap gap-4" id="skills-chips" aria-label="Skill chips">
-                    <span class="skill-chip">C++</span>
-                    <span class="skill-chip">STL</span>
-                    <span class="skill-chip">Data Structures</span>
-                    <span class="skill-chip">Algorithms</span>
-                    <span class="skill-chip">Binary Search</span>
-                    <span class="skill-chip">Greedy</span>
-                    <span class="skill-chip">C</span>
-                </div>
-            </div>
-        </section>
+        <!-- WORK (MINIMAL LIST) -->
+        <section class="work section" id="work">
+            <div class="section-label">02 // DEPLOYMENTS</div>
+            <h2 class="reveal">WORKSPACE.</h2>
 
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Education">
-            <div class="max-w-3xl mx-auto">
-                <div class="glass-panel p-12 rounded-[2.5rem]">
-                    <div class="flex items-center gap-5 mb-10">
-                        <div class="w-16 h-16 rounded-2xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30">
-                            <i class="fa-solid fa-graduation-cap text-cobaltLight text-2xl" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-4xl font-black text-white tracking-tight">Education</h3>
+            <div class="work-list">
+                
+                <a href="https://gub-dragons.pro.bd" target="_blank" rel="noopener" class="work-row reveal">
+                    <span class="w-id">001</span>
+                    <div class="w-main">
+                        <h3>GUB_DRAGONS</h3>
+                        <p>Competitive intelligence network and telemetry system for university programming teams.</p>
                     </div>
-                    <h4 class="text-3xl font-bold text-white mb-4">B.Sc. in Computer Science & Engineering</h4>
-                    <p class="text-cobaltLight font-mono text-xl mb-4">Green University of Bangladesh</p>
-                    <p class="text-sm text-gray-500 uppercase tracking-widest font-black bg-gray-900 inline-block px-4 py-2 rounded-lg border border-gray-800">Currently Pursuing</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Certifications">
-            <div class="flex items-center gap-6 mb-20">
-                <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                    <i class="fa-solid fa-certificate text-cobaltLight text-4xl" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <h2 class="text-5xl font-black text-white tracking-tighter">Verified Credentials</h2>
-                    <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Formal coursework & verification</p>
-                </div>
-            </div>
-
-            <div class="mb-24">
-                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-cobaltLight pl-6">Academic & Coursework</h3>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
-                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-red-900/20 rounded-full blur-3xl group-hover:bg-red-800/40 transition-colors"></div>
-                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-cobaltLight transition-colors">CS50x: Intro to Computer Science</h4>
-                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">Harvard University / edX</p>
-                        <div class="mt-auto flex items-center justify-between relative z-10">
-                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">Dec 2025</div>
-                            <a href="https://courses.edx.org/certificates/adecc6c84a4241c9a4f777cb68bb3060" target="_blank" aria-label="Verify CS50x" class="px-6 py-3 bg-cobalt/15 hover:bg-cobalt text-cobaltLight hover:text-white border border-cobalt/40 rounded-xl font-bold text-base transition-all flex items-center gap-3">
-                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                    <div class="w-tags">
+                        <span>DATA</span><span>API</span><span>UI/UX</span>
                     </div>
-
-                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
-                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-900/20 rounded-full blur-3xl group-hover:bg-blue-800/40 transition-colors"></div>
-                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-cobaltLight transition-colors">Data Structures in C</h4>
-                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">University of Michigan / Coursera</p>
-                        <div class="mt-auto flex items-center justify-between relative z-10">
-                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">May 2026</div>
-                            <a href="https://coursera.org/verify/K0JV7I21BQPH" target="_blank" aria-label="Verify Data Structures in C" class="px-6 py-3 bg-cobalt/15 hover:bg-cobalt text-cobaltLight hover:text-white border border-cobalt/40 rounded-xl font-bold text-base transition-all flex items-center gap-3">
-                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-16">
-                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-green-500 pl-6">Skill & Practical Verification</h3>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
-                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-yellow-900/20 rounded-full blur-3xl group-hover:bg-yellow-800/40 transition-colors"></div>
-                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-yellow-400 transition-colors">Introduction to Javascript: The Basics</h4>
-                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">Coursera Project Network</p>
-                        <div class="mt-auto flex items-center justify-between relative z-10">
-                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">May 2026</div>
-                            <a href="https://coursera.org/verify/KO0W0P2T88MC" target="_blank" aria-label="Verify JS basics" class="px-6 py-3 bg-yellow-500/10 hover:bg-yellow-600 text-yellow-500 hover:text-white border border-yellow-500/30 rounded-xl font-bold text-base transition-all flex items-center gap-3">
-                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col h-full relative overflow-hidden group">
-                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-900/20 rounded-full blur-3xl group-hover:bg-green-800/40 transition-colors"></div>
-                        <h4 class="text-2xl font-black text-white mb-3 relative z-10 group-hover:text-green-400 transition-colors">Problem Solving (Intermediate)</h4>
-                        <p class="text-gray-400 text-lg mb-8 relative z-10 font-bold">HackerRank</p>
-                        <div class="mt-auto flex items-center justify-between relative z-10">
-                            <div class="inline-block px-4 py-2 bg-gray-900 border border-gray-800 text-gray-400 text-sm font-mono font-bold rounded-xl">10 May 2026</div>
-                            <a href="https://www.hackerrank.com/certificates/3124be3877fc" target="_blank" aria-label="Verify HackerRank certificate" class="px-6 py-3 bg-green-500/10 hover:bg-green-600 text-green-500 hover:text-white border border-green-500/30 rounded-xl font-bold text-base transition-all flex items-center gap-3">
-                                Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="View latest certifications on LinkedIn" class="inline-flex items-center justify-center w-full lg:w-auto gap-4 px-12 py-6 bg-cobalt text-white hover:bg-cobaltLight rounded-2xl transition-all font-black text-xl tracking-wide shadow-[0_0_30px_rgba(37,72,165,0.4)] hover:shadow-[0_0_50px_rgba(37,72,165,0.7)] hover:scale-[1.02]">
-                    <i class="fa-brands fa-linkedin text-3xl" aria-hidden="true"></i> View latest certifications on LinkedIn
+                    <span class="w-arrow">↗</span>
                 </a>
+
+                <a href="https://tanmoym.pro.bd" target="_blank" rel="noopener" class="work-row reveal">
+                    <span class="w-id">002</span>
+                    <div class="w-main">
+                        <h3>DIGITAL SPACE</h3>
+                        <p>Personal portfolio system documenting technical evolution and code deployments.</p>
+                    </div>
+                    <div class="w-tags">
+                        <span>FRONTEND</span><span>SYSTEM</span>
+                    </div>
+                    <span class="w-arrow">↗</span>
+                </a>
+
             </div>
         </section>
 
-        <section class="py-16 lg:py-24 border-t border-gray-900/50" aria-label="Projects">
-            <div class="flex flex-col md:flex-row items-start justify-between mb-16 gap-6">
-                <div class="flex items-center gap-6">
-                    <div class="w-20 h-20 rounded-3xl bg-cobalt/20 flex items-center justify-center border border-cobalt/30 shadow-[0_0_30px_rgba(37,72,165,0.3)]">
-                        <i class="fa-brands fa-github-alt text-cobaltLight text-4xl" aria-hidden="true"></i>
+
+        <!-- ENGINEERING -->
+        <section class="systems section" id="engineering">
+            <div class="section-label">03 // ARCHITECTURE</div>
+            <h2 class="reveal">TECHNICAL RANGE.</h2>
+
+            <div class="sys-list">
+                
+                <div class="sys-row reveal">
+                    <span class="sys-num">01</span>
+                    <span class="sys-sym">&lt;/&gt;</span>
+                    <div class="sys-info">
+                        <h3>SOFTWARE</h3>
+                        <p>Algorithms, data structures, APIs, and application logic.</p>
                     </div>
+                    <div class="sys-tech">C++ / JAVA / JS / GIT</div>
+                </div>
+
+                <div class="sys-row reveal">
+                    <span class="sys-num">02</span>
+                    <span class="sys-sym">◇</span>
+                    <div class="sys-info">
+                        <h3>ALGORITHMS</h3>
+                        <p>Competitive programming, graph theory, and complexity.</p>
+                    </div>
+                    <div class="sys-tech">DSA / NUMBER THEORY / BS</div>
+                </div>
+
+                <div class="sys-row reveal">
+                    <span class="sys-num">03</span>
+                    <span class="sys-sym">◫</span>
+                    <div class="sys-info">
+                        <h3>HARDWARE</h3>
+                        <p>Microcontrollers, circuitry, sensors, and robotics.</p>
+                    </div>
+                    <div class="sys-tech">ESP32 / ARDUINO / PROTEUS</div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STATS / TELEMETRY -->
+        <section class="stats section" id="stats">
+            <div class="section-label">04 // TELEMETRY</div>
+            <h2 class="reveal">LIVE DATA.</h2>
+
+            <div class="telemetry-grid">
+                
+                <!-- CODEFORCES -->
+                <div class="telemetry-panel reveal">
+                    <div class="panel-header">
+                        <div>
+                            <span class="platform">CODEFORCES</span>
+                            <span class="handle" id="cfHandle">@mitratanmoy246</span>
+                        </div>
+                        <span id="cfChartStatus" class="status-sync">SYNCING</span>
+                    </div>
+
+                    <div class="data-row">
+                        <div>
+                            <small>RANK</small>
+                            <strong id="cfRank">LOADING</strong>
+                        </div>
+                        <div>
+                            <small>CURRENT</small>
+                            <strong id="cfRating">—</strong>
+                        </div>
+                        <div>
+                            <small>MAX</small>
+                            <strong id="cfMaxRating">—</strong>
+                        </div>
+                        <div>
+                            <small>SOLVED</small>
+                            <strong id="cfSolved">—</strong>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="cfChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- CODECHEF -->
+                <div class="telemetry-panel reveal">
+                    <div class="panel-header">
+                        <div>
+                            <span class="platform">CODECHEF</span>
+                            <!-- <span class="handle">@kryven</span> -->
+                        </div>
+                        <span id="ccChartStatus" class="status-sync">SYNCING</span>
+                    </div>
+
+                    <div class="data-row">
+                        <div>
+                            <small>STARS</small>
+                            <strong id="ccStars">LOADING</strong>
+                        </div>
+                        <div>
+                            <small>CURRENT</small>
+                            <strong id="ccRating">—</strong>
+                        </div>
+                        <div>
+                            <small>MAX</small>
+                            <strong id="ccMaxRating">—</strong>
+                        </div>
+                        <div>
+                            <small>SOLVED</small>
+                            <strong id="ccSolved">—</strong>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="ccChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TERMINAL -->
+            <div class="terminal-box reveal">
+                <div class="term-top">
+                    <span></span><span></span><span></span>
+                    <small>TERMINAL // TRACKING</small>
+                </div>
+                <div class="term-body">
+                    <div class="term-line"><span class="prompt">$</span> fetch profile_metrics() --live</div>
+                    
+                    <div class="term-split">
+                        <div>
+                            <div class="term-head">GITHUB / <span id="termGhUsername">mitratanmoy246</span></div>
+                            <div class="term-data">
+                                <span>COMMITS:</span> <span id="termGhCommits">—</span><br>
+                                <span>STARS:</span> <span id="termGhStars">—</span><br>
+                                <span>CURRENT STREAK:</span> <span id="termGhCStreak">—</span><br>
+                                <span>LONGEST STREAK:</span> <span id="termGhLStreak">—</span>
+                            </div>
+                            <div class="term-head" style="margin-top:15px;">LANGUAGES</div>
+                            <div class="term-langs" id="termGhLangs">
+                                <span>LOADING...</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="term-head">LEETCODE / <span id="termLcUsername">mitratanmoy246</span></div>
+                            <div class="term-data">
+                                <span>TOTAL SOLVED:</span> <span id="termLcSolved">—</span><br>
+                                <span>ACCEPTANCE:</span> <span id="termLcAcceptance">—</span><br>
+                                <span>GLOBAL RANK:</span> <span id="termLcRank">—</span>
+                            </div>
+                            <div class="term-head" style="margin-top:15px;">DIFFICULTY</div>
+                            <div class="term-data">
+                                <span>EASY:</span> <span id="termLcEasy">—</span><br>
+                                <span>MEDIUM:</span> <span id="termLcMedium">—</span><br>
+                                <span>HARD:</span> <span id="termLcHard">—</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="term-line mt-10"><span class="prompt">$</span> <span class="cursor">_</span></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- TIMELINE -->
+        <section class="journey section">
+            <div class="section-label">05 // TIMELINE</div>
+            <h2 class="reveal">EVOLUTION.</h2>
+
+            <div class="timeline-list">
+                <div class="time-row reveal">
+                    <span class="year">2025</span>
                     <div>
-                        <h2 class="text-5xl font-black text-white tracking-tighter">Project Vault</h2>
-                        <p class="text-gray-400 font-mono text-lg mt-2 uppercase tracking-widest">Open-source implementations & competitive tooling</p>
+                        <h3>THE ALGORITHM PHASE</h3>
+                        <p>Strict focus on competitive programming and fundamental data structures.</p>
+                    </div>
+                </div>
+                <div class="time-row reveal">
+                    <span class="year">2026</span>
+                    <div>
+                        <h3>BUILDING SYSTEMS</h3>
+                        <p>Expanding scope to APIs, frontend development, CAD, and electronics.</p>
+                    </div>
+                </div>
+                <div class="time-row reveal">
+                    <span class="year">NOW</span>
+                    <div>
+                        <h3>CONNECTING LAYERS</h3>
+                        <p>Integrating hardware logic, software architecture, and interface design.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="mb-16">
-                <h3 class="text-3xl font-black text-white mb-10 border-l-8 border-cobaltLight pl-6">Soft Projects <span class="text-gray-500 font-bold text-lg ml-3 tracking-normal">(Live from GitHub)</span></h3>
-                <div id="github-loader" class="text-cobaltLight animate-pulse text-base font-mono bg-cobalt/10 p-6 rounded-2xl border border-cobalt/20 w-fit mb-10">Fetching latest repositories via API...</div>
-                <div id="github-repos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden" aria-label="GitHub repositories"></div>
-            </div>
 
-            <div class="mt-20 text-center">
-                <div class="inline-flex items-center gap-3 px-6 py-3 bg-gray-900/50 border border-gray-800 rounded-2xl mb-6">
-                    <i class="fa-brands fa-github text-cobaltLight text-xl" aria-hidden="true"></i>
-                    <span class="font-mono text-sm font-bold text-gray-300">GitHub: mitratanmoy246</span>
-                </div>
-                <br>
-                <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="All GitHub repositories" class="inline-flex items-center gap-4 px-12 py-6 bg-transparent border-[3px] border-cobalt text-cobaltLight hover:bg-cobalt hover:text-white rounded-2xl transition-all font-black text-xl tracking-wide shadow-[0_0_20px_rgba(37,72,165,0.2)] hover:shadow-[0_0_40px_rgba(37,72,165,0.5)]">
-                    <i class="fa-brands fa-github text-3xl" aria-hidden="true"></i> View All Repositories on GitHub
-                </a>
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <div class="section-label">06 // ENDPOINT</div>
+            <h2 class="reveal">INITIALIZE<br><span>CONTACT.</span></h2>
+            
+            <p class="reveal">
+                Software projects, technical collaboration, or system architecture. Open to transmissions.
+            </p>
+
+            <div class="contact-grid reveal">
+                <a href="mailto:contact.tanmoy.mitra@gmail.com">EMAIL ↗</a>
+                <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+                <a href="https://github.com/mitratanmoy246" target="_blank" rel="noopener">GITHUB ↗</a>
             </div>
         </section>
 
-        <section class="py-8 lg:py-14 border-t border-gray-900/50" aria-label="Contact">
-            <div class="glass-panel p-10 lg:p-14 rounded-[2.5rem] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
-                <div>
-                    <h2 class="text-4xl font-black text-white">Contact</h2>
-                    <p class="text-gray-400 text-lg mt-2">For contest collaborations, ICPC preparation, or software projects.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-5 w-full lg:w-auto">
-                    <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email Tanmoy" class="flex items-center justify-center gap-3 px-10 py-5 bg-cobalt text-white hover:bg-cobaltLight rounded-2xl transition-all font-black text-lg tracking-wide">
-                        <i class="fa-solid fa-envelope text-xl" aria-hidden="true"></i> Email
-                    </a>
-                    <a href="resume.pdf" target="_blank" aria-label="Download resume" class="flex items-center justify-center gap-3 px-10 py-5 bg-panelBg border-2 border-gray-800 hover:border-cobalt hover:shadow-[0_0_25px_rgba(37,72,165,0.4)] rounded-2xl transition-all font-bold text-white text-lg">
-                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
-                    </a>
-                </div>
-            </div>
-        </section>
+    </main>
 
-    </div>
-
-    <footer class="border-t border-gray-900 bg-black pt-20 pb-10 relative z-10" aria-label="Footer">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
-                <div class="text-center md:text-left">
-                    <h3 class="text-4xl font-black text-white tracking-tighter mb-2">Tanmoy <span class="text-cobaltLight">Mitra</span></h3>
-                    <p class="text-gray-500 text-lg font-bold">Competitive Programmer</p>
-                </div>
-                <div class="flex gap-6">
-                    <a href="mailto:contact.tanmoy.mitra@gmail.com" aria-label="Email" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/mitratanmoy246" target="_blank" aria-label="GitHub" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
-                        <i class="fa-brands fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/tanmoy-mitra-470341404/" target="_blank" aria-label="LinkedIn" class="w-16 h-16 rounded-full bg-gray-900 border-2 border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cobalt hover:border-cobalt transition-all shadow-lg hover:shadow-[0_0_20px_rgba(37,72,165,0.5)] text-2xl">
-                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-gray-900/80">
-                <p class="text-gray-600 text-base font-bold">© 2026 Tanmoy Mitra. All rights reserved.</p>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="text-gray-500 hover:text-white text-base font-black uppercase tracking-widest flex items-center gap-3 transition-colors bg-gray-900 px-6 py-3 rounded-xl border border-gray-800 hover:border-gray-600">
-                    Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-                </button>
-            </div>
+    <footer>
+        <div>
+            <strong>SYS.TM</strong>
+            <span>TANMOY MITRA // 2026</span>
         </div>
+        <a href="#top">RETURN TO TOP ↑</a>
     </footer>
 
-    <script src="utils.js"></script>
-    <script src="api.js"></script>
-    <script src="main.js"></script>
+    <div class="mobile-nav">
+        <a href="#work">WORK</a>
+        <a href="#engineering">SYSTEMS</a>
+        <a href="#stats">DATA</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
 </body>
 </html>
