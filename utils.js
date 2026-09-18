@@ -1,38 +1,36 @@
-// --- Shared helpers ---
-function animateCounter(el, to, duration = 1000) {
-    const from = 0;
-    const diff = (to || 0) - from;
-    const start = performance.now();
+function setText(id, value, fallback = '—') {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (value === undefined || value === null || value === '') {
+        el.textContent = fallback;
+        return;
+    }
+    el.textContent = value;
+}
 
-    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+function setupReveal() {
+    const elements = document.querySelectorAll('.reveal');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function step(now) {
-        const t = Math.min(1, (now - start) / duration);
-        const v = Math.round(from + diff * easeOutCubic(t));
-        el.textContent = (v ?? 0).toLocaleString();
-        if (t < 1) requestAnimationFrame(step);
+    if (reduced || !('IntersectionObserver' in window)) {
+        elements.forEach(el => el.classList.add('visible'));
+        return;
     }
 
-    requestAnimationFrame(step);
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px' });
+
+    elements.forEach(el => observer.observe(el));
 }
 
-function renderStars(container, count) {
-    const safe = Number(count);
-    const n = Number.isFinite(safe) && safe > 0 ? safe : 0;
-    let html = '';
-    for (let i = 0; i < n; i++) html += '<i class="fa-solid fa-star"></i>';
-    container.innerHTML = html;
-}
-
-// --- Skills chip entrance animation ---
-function animateSkillChips() {
-    const chips = document.querySelectorAll('.skill-chip');
-    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    chips.forEach((chip, i) => {
-        if (reduced) {
-            chip.classList.add('in');
-        } else {
-            setTimeout(() => chip.classList.add('in'), 120 + i * 70);
-        }
-    });
+function formatDate(timestamp) {
+    if (!timestamp) return '';
+    const date = new Date(timestamp * 1000);
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toLocaleDateString(undefined, { month: 'short', year: '2-digit' });
 }
